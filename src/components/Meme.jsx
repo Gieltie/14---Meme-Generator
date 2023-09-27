@@ -1,7 +1,15 @@
+import memesData from "../data/memesData"
+
 export default function Meme() {
+    function handleClick() {
+        const memeImage = memesData.data.memes
+        const randomNumber = Math.floor(Math.random() * memeImage.length)
+        const { url } = memeImage[randomNumber]
+        console.log(url)
+    }
     return (
         <main>
-            <form className="form">
+            <div className="form">
                 <input 
                     type="text"
                     placeholder="Top text"
@@ -11,10 +19,11 @@ export default function Meme() {
                     placeholder="Bottom text"
                     className="form--inputs" />
                 <input 
-                    type="button" 
+                    type="button"
+                    onClick={handleClick} 
                     className="form--button"
                     value="Get a new meme image 🖼" />
-            </form>
+            </div>
         </main>
     )
 }
