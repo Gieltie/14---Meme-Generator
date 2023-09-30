@@ -6,7 +6,7 @@ export default function Header() {
             <img 
                 src={troll}
                 className='header--image' />
-            <h2 className='header--title'>Header component</h2>
+            <h2 className='header--title'>Generateur d'image Mimee</h2>
             <h4 className='header--project'>React Course - Project 3</h4>
         </header>
     )
